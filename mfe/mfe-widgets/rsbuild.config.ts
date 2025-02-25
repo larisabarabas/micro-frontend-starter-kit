@@ -11,7 +11,8 @@ export default defineConfig({
       exposes: {
         './button': './src/components/button.tsx',
         './card': './src/components/card.tsx',
-        './tailwind': './src/App.css'
+        './tailwind': './src/App.css',
+        './types': './src/types/index.ts'
       },
       shared: ['react', 'react-dom'],
     }),
