@@ -18,7 +18,7 @@ export default defineConfig({
     }),
   ],
   output: {
-    publicPath: 'http://localhost:3005/', // Adjust if needed
+    publicPath: process.env.PUBLIC_PATH ?? "http://localhost:3005", // Adjust if needed
     library: 'mfeWidgets', // Important: Defines global variable
     libraryTarget: 'umd', // Ensures it’s accessible in window
   },

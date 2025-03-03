@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    // Load Tailwind styles from mfeWidgets
+    const remoteURL = process.env.NEXT_PUBLIC_REMOTE_MFE_WIDGETS ?? "http://localhost:3005/remoteEntry.js"
     loadRemoteComponentStyle<{ default: string }>(
-      'http://localhost:3005/remoteEntry.js',
+      remoteURL,
       'mfeWidgets',
       './tailwind'
     ).then((module) => {

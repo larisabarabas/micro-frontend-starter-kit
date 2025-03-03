@@ -17,7 +17,7 @@ export default function HomePage() {
     loadRemoteComponent(remoteUrl, 'mfeWidgets', './button')
     .then((module) => setRemoteButton(() => module.default))
     .catch((error) => console.error("Failed to load remote module:", error))
-  }, []);
+  }, [remoteUrl]);
 
   return (
     <div>
