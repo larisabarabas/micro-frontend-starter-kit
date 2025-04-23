@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         source: "/dashboard",
         destination: "http://localhost:3001/dashboard",
       },
+      {
+        source: "/profile/:path*", 
+        destination: "http://localhost:3006/:path*",
+      },
     ];
   },
 

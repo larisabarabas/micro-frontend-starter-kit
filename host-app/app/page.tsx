@@ -20,9 +20,9 @@ export default function HomePage() {
   }, [remoteUrl]);
 
   return (
-    <div>
+    <div className='p-4'>
       <p className='font-bold text-2xl'>Host App (Next.js + Turbopack)</p>
-      {RemoteButton ? <RemoteButton title="Loaded from Host" /> : <p>Loading remote button...</p>}
+      {RemoteButton ? <RemoteButton title="Loaded from Host" onClick={() => console.log("Clicked this button")} /> : <p>Loading remote button...</p>}
     </div>
   );
 }
